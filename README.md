@@ -61,4 +61,4 @@ Angular CLI non include un framework e2e di default, quindi puoi scegliere quell
 Per maggiori informazioni su Angular CLI, inclusi riferimenti dettagliati ai comandi, consulta la pagina ufficiale “Angular CLI Overview and Command Reference”. [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 ## Anteprima online
-Apri il progetto pubblicato su GitHub Pages: https://nicmarnic.github.io/the-spoon/ [https://nicmarnic.github.io/the-spoon/]
+Apri il progetto pubblicato su GitHub Pages: [https://nicmarnic.github.io/the-spoon/](https://nicmarnic.github.io/the-spoon/)
