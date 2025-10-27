@@ -1,0 +1,288 @@
+<!-- Hero Section -->
+<section class="hero-section text-white text-center py-5">
+  <!-- Bollicine Individuali -->
+  <div class="bubble bubble-1"></div>
+  <div class="bubble bubble-2"></div>
+  <div class="bubble bubble-3"></div>
+  <div class="bubble bubble-4"></div>
+  <div class="bubble bubble-5"></div>
+  <div class="bubble bubble-6"></div>
+  <div class="bubble bubble-7"></div>
+  <div class="bubble bubble-8"></div>
+  <div class="bubble bubble-9"></div>
+  <div class="bubble bubble-10"></div>
+  <div class="bubble bubble-11"></div>
+
+  <div class="container-xl position-relative" style="z-index: 10;">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="display-3 fw-bold mb-4 animate-on-load">
+          Prenota i migliori ristoranti d'Italia
+        </h1>
+        <p class="lead fs-4 mb-5 animate-on-load">
+          Scopri l'autentica cucina italiana, dalla pizza napoletana alla bistecca fiorentina.
+          Prenota il tuo tavolo in pochi click.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Search Section - CON AUTOCOMPLETE CITTÀ -->
+<section class="search-section py-4">
+  <div class="container-xl">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-lg border-0 rounded-4 search-card animate-on-load"
+             style="margin-top: -3rem;">
+          <div class="card-body p-4">
+            <form class="search-form" (ngSubmit)="searchRestaurants()">
+              <div class="row g-3">
+                <!-- Dove - CON AUTOCOMPLETE -->
+                <div class="col-md-6">
+                  <label for="city" class="form-label fw-semibold search-label">📍 Dove?</label>
+                  <div class="position-relative">
+                    <input
+                      type="text"
+                      id="city"
+                      class="form-control form-control-lg search-input"
+                      [(ngModel)]="searchFilters.city"
+                      name="city"
+                      placeholder="Scrivi la tua città..."
+                      autocomplete="off"
+                      (input)="onCityInput($event)"
+                      (focus)="onCityFocus()"
+                      (blur)="onCityBlur()"
+                    >
+
+                    <!-- Dropdown Autocomplete -->
+                    <div *ngIf="showCityDropdown && filteredCities.length > 0"
+                         class="search-dropdown position-absolute w-100 mt-1">
+                      <div
+                        *ngFor="let city of filteredCities; let i = index"
+                        class="search-dropdown-item"
+                        [class.active]="selectedCityIndex === i"
+                        (click)="selectCity(city)"
+                      >
+                        <span class="me-2">📍</span>
+                        {{ city }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Che cucina -->
+                <div class="col-md-6">
+                  <label for="cuisine" class="form-label fw-semibold search-label">🍝 Che cucina?</label>
+                  <select id="cuisine" class="form-select form-select-lg search-select"
+                          [(ngModel)]="searchFilters.cuisine" name="cuisine">
+                    <option value="">Tutti i tipi</option>
+                    <option value="Italiana">Italiana</option>
+                    <option value="Cinese">Cinese</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Pesce">Pesce</option>
+                    <option value="Pub&Steakhouse">Pub&Steakhouse</option>
+                  </select>
+                </div>
+
+                <!-- Search Button -->
+                <div class="col-12">
+                  <button type="submit" class="btn btn-lg w-100 fw-semibold rounded-3 py-3 search-button">
+                    🔍 Trova Ristoranti
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categorie Cucina Italiana -->
+<section class="categories-section py-5">
+  <div class="container-xl">
+    <!-- Titolo Sezione -->
+    <div class="row">
+      <div class="col-12">
+        <h2 class="display-5 fw-bold text-center mb-5 section-title">Esplora la Cucina Italiana</h2>
+      </div>
+    </div>
+
+    <!-- Griglia Categorie -->
+    <div class="row g-4 mb-5 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-2" *ngFor="let category of categories">
+        <div class="category-item text-center p-3 rounded-4 h-100"
+             (click)="filterByCuisine(category.name)">
+          <div class="category-icon mx-auto mb-3 rounded-circle d-flex align-items-center justify-content-center text-white">
+            {{ category.icon }}
+          </div>
+          <div class="category-name fw-semibold">{{ category.name }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Filters - AGGIORNATI -->
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <div class="filter-chip badge rounded-pill px-4 py-2 fs-6 fw-medium"
+               [class.active]="quickFilters[0].active"
+               (click)="toggleFilter(quickFilters[0])">
+            Tutti
+          </div>
+          <div class="filter-chip badge rounded-pill px-4 py-2 fs-6 fw-medium"
+               [class.active]="quickFilters[1].active"
+               (click)="toggleFilter(quickFilters[1])">
+            Aperti
+          </div>
+          <div class="filter-chip badge rounded-pill px-4 py-2 fs-6 fw-medium"
+               [class.active]="quickFilters[2].active"
+               (click)="toggleFilter(quickFilters[2])">
+            Migliori Recensioni
+          </div>
+          <div class="filter-chip badge rounded-pill px-4 py-2 fs-6 fw-medium"
+               [class.active]="quickFilters[3].active"
+               (click)="toggleFilter(quickFilters[3])">
+            Nuovi
+          </div>
+          <div class="filter-chip badge rounded-pill px-4 py-2 fs-6 fw-medium"
+               [class.active]="quickFilters[4].active"
+               (click)="toggleFilter(quickFilters[4])">
+            Premium
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Restaurants Section -->
+<section class="restaurants-section py-5">
+  <div class="container-xl">
+    <!-- Titolo -->
+    <div class="row">
+      <div class="col-12">
+        <h2 class="display-5 fw-bold text-center mb-5 section-title">Ristoranti Consigliati</h2>
+      </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div *ngIf="loading" class="row">
+      <div class="col-12">
+        <div class="text-center py-5">
+          <div class="spinner-border loading-spinner mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="fs-5 loading-text">🍽️ Caricamento ristoranti...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Errore -->
+    <div *ngIf="error && !loading" class="row">
+      <div class="col-12">
+        <div class="alert alert-danger text-center py-4 error-alert" role="alert">
+          <h4 class="alert-heading">Ops! Qualcosa è andato storto</h4>
+          <p class="mb-3">{{ error }}</p>
+          <button class="btn btn-outline-danger" (click)="loadRestaurants()">
+            🔄 Riprova
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nessun risultato -->
+    <div *ngIf="!loading && !error && filteredRestaurants.length === 0" class="row">
+      <div class="col-12">
+        <div class="text-center py-5 no-results">
+          <div class="mb-4 fs-1">🔍</div>
+          <h3 class="mb-3">Nessun ristorante trovato</h3>
+          <p class="text-muted mb-4">Prova a modificare i filtri di ricerca</p>
+          <button class="btn btn-outline-primary clear-filters-btn" (click)="loadRestaurants()">
+            Mostra tutti i ristoranti
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Griglia Ristoranti - AGGIORNATA CON FOTO REALI -->
+<div class="row g-4" *ngIf="!loading && !error && filteredRestaurants.length > 0" id="restaurantsGrid">
+  <div class="col-lg-4 col-md-6" *ngFor="let restaurant of filteredRestaurants">
+    <div class="card h-100 border-0 rounded-4 shadow-lg restaurant-card"
+         (click)="viewRestaurant(restaurant.id)">
+
+      <!-- Card Image Container - AGGIORNATO -->
+      <div class="card-img-top position-relative restaurant-image-container">
+        <!-- Foto reale -->
+        <img *ngIf="getRestaurantMainPhoto(restaurant.id)"
+             [src]="getRestaurantMainPhoto(restaurant.id)"
+             [alt]="restaurant.name"
+             class="restaurant-image w-100 h-100 object-fit-cover rounded-top-4"
+             (error)="onImageError($event, restaurant.id)"
+             loading="lazy">
+
+        <!-- Placeholder quando non c'è foto -->
+        <div *ngIf="!getRestaurantMainPhoto(restaurant.id)"
+             class="restaurant-image-placeholder d-flex align-items-center justify-content-center text-white fw-semibold fs-5 rounded-top-4">
+          <div class="text-center">
+            <div class="fs-1 mb-2">📸</div>
+            <div class="small">{{ restaurant.name }}</div>
+          </div>
+        </div>
+
+        <!-- Badge rating sovrapposto -->
+        <div class="position-absolute top-0 end-0 m-3">
+          <div class="badge rounded-pill px-3 py-2 fw-semibold rating-badge-overlay">
+            <span class="text-warning me-1">⭐</span>
+            {{ restaurant.rating || 0 }}
+          </div>
+        </div>
+
+        <!-- Hover overlay -->
+        <div class="card-hover-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center rounded-4">
+          <div class="btn btn-primary btn-lg">
+            👁️ Visualizza Dettagli
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Body -->
+      <div class="card-body p-4">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <div class="flex-grow-1">
+            <h5 class="card-title fw-bold restaurant-title mb-1">{{ restaurant.name }}</h5>
+            <p class="card-text small fw-semibold mb-0 restaurant-cuisine">
+              <span class="me-1">🍽️</span>{{ restaurant.cuisineType }}
+            </p>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="d-flex align-items-center mb-3 restaurant-location">
+          <span class="me-2">📍</span>
+          <small class="text-muted">{{ restaurant.address }}, {{ restaurant.city }}</small>
+        </div>
+
+        <!-- Description -->
+        <p class="card-text restaurant-description small mb-3 text-muted">
+          {{ restaurant.description }}
+        </p>
+
+        <!-- Footer -->
+        <div class="d-flex justify-content-between align-items-center pt-3 border-top restaurant-footer">
+          <!-- Rating dettagliato -->
+          <div class="d-flex flex-column">
+            <div class="text-warning mb-1">{{ getStars(restaurant.rating || 0) }}</div>
+            <small class="text-muted">{{ restaurant.reviewCount || 0 }} recensioni</small>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>

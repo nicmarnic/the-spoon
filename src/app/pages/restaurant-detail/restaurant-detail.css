@@ -1,0 +1,1709 @@
+/* Restaurant Detail Styles - CON VARIABILI TEMA */
+.restaurant-detail {
+  padding-bottom: 100px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.hero-section {
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero-image {
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-image > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔥 SEZIONI CON VARIABILI TEMA */
+.restaurant-info {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.strengths-section {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.discount-banner {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+}
+
+.booking-section {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.menu-section {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.reviews-section {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* 🔥 OVERRIDE BOOTSTRAP CLASSES */
+.bg-dark {
+  background-color: var(--bg-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary) !important;
+}
+
+.text-white {
+  color: var(--text-color) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.border-secondary {
+  border-color: var(--border-color) !important;
+}
+
+/* 🔥 BUTTONS CON TEMA */
+.btn-outline-success {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-success:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+.btn-success {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+.btn-success:hover {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+/* 🔥 NAVIGATION BUTTONS */
+.btn-dark {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+}
+
+.btn-dark:hover {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  border-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* 🔥 BADGES CON TEMA */
+.badge.bg-light {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.badge.bg-secondary {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* 🔥 ALERT CON TEMA */
+.alert-dark {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-color) !important;
+}
+
+.alert-dark .border-success {
+  border-color: var(--primary-color) !important;
+}
+
+/* 🔥 REVIEW CARD CON TEMA */
+.review-card {
+  background-color: var(--bg-secondary) !important;
+  border-left: 4px solid var(--primary-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* 🔥 FIXED BOTTOM CTA */
+.fixed-bottom {
+  background-color: var(--bg-color) !important;
+  border-top: 1px solid var(--border-color) !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔥 MENU ITEMS */
+.menu-items .border-bottom {
+  border-bottom-color: var(--border-color) !important;
+}
+
+.menu-items .border-bottom:last-child {
+  border-bottom: none !important;
+}
+
+/* 🔥 ICONS */
+.text-success {
+  color: var(--primary-color) !important;
+}
+
+.fas.fa-check {
+  color: var(--primary-color) !important;
+}
+
+.fas.fa-utensils {
+  color: var(--primary-color) !important;
+}
+
+.fas.fa-map-marker-alt {
+  color: var(--primary-color) !important;
+}
+
+.fas.fa-euro-sign {
+  color: var(--primary-color) !important;
+}
+
+.fas.fa-chef-hat {
+  color: var(--primary-color) !important;
+}
+
+.fas.fa-check-circle {
+  color: var(--primary-color) !important;
+}
+
+/* 🔥 LINKS */
+.text-success.text-decoration-none {
+  color: var(--primary-color) !important;
+}
+
+.text-success.text-decoration-none:hover {
+  color: var(--primary-dark) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 250px;
+  }
+
+  .display-6 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animations */
+.restaurant-detail section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth transitions */
+.restaurant-detail * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+/* Hero Photo Container */
+.hero-photo-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Photo */
+.hero-photo {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-photo:hover {
+  transform: scale(1.02);
+}
+
+/* Gallery Controls */
+.hero-photo-container .btn {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border: none !important;
+  color: white !important;
+  width: 40px;
+  height: 40px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.hero-photo-container .btn:hover {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  transform: scale(1.1);
+}
+
+/* Photo Counter Badge */
+.hero-photo-container .badge {
+  backdrop-filter: blur(10px);
+  font-size: 0.8rem;
+}
+
+/* Loading states per foto */
+.hero-image.loading {
+  background: linear-gradient(90deg,
+    var(--bg-secondary) 25%,
+    var(--border-color) 50%,
+    var(--bg-secondary) 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Menu Items migliorati */
+.menu-items .border-bottom:last-child {
+  border-bottom: none !important;
+}
+
+.menu-items .fw-medium {
+  color: var(--text-color) !important;
+}
+
+.menu-items .text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Responsive per gallery */
+@media (max-width: 768px) {
+  .hero-photo-container .btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .hero-photo-container .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Animazioni per gallery */
+.hero-photo {
+  animation: fadeInPhoto 0.5s ease-out;
+}
+
+@keyframes fadeInPhoto {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Miglioramenti per description */
+.restaurant-info p {
+  line-height: 1.6;
+  color: var(--text-light) !important;
+}
+
+/* Loading spinner per menu */
+.menu-section .spinner-border {
+  color: var(--primary-color) !important;
+}
+
+/* Menu highlights styling */
+.menu-items {
+  background-color: var(--bg-secondary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menu-items .border-bottom {
+  border-bottom-color: var(--border-color) !important;
+  padding: 0.75rem 0;
+}
+
+.menu-items .border-bottom:hover {
+  background-color: var(--bg-color);
+  margin: 0 -1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+/* Alert per menu error */
+.alert-warning {
+  background-color: rgba(255, 193, 7, 0.1) !important;
+  border-color: rgba(255, 193, 7, 0.2) !important;
+  color: #ffc107 !important;
+}
+
+/* Placeholder per menu vuoto */
+.menu-section .text-center .fs-1 {
+  opacity: 0.6;
+}
+
+/* Miglioramenti rating section */
+.reviews-section .display-6 {
+  color: var(--primary-color) !important;
+}
+
+.reviews-section .text-warning {
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+}
+
+/* Badges nel restaurant info */
+.restaurant-info .badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.restaurant-info .badge.bg-secondary {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-light) !important;
+  border: 1px solid var(--border-color);
+}
+
+/* Hover effects per bottoni gallery */
+.hero-photo-container .btn-sm {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.hero-photo-container:hover .btn-sm {
+  opacity: 1;
+}
+
+/* Smooth transitions per tutti gli elementi */
+.restaurant-detail * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Fix per z-index dei controlli gallery */
+.hero-photo-container .btn {
+  z-index: 10;
+}
+
+.hero-photo-container .badge {
+  z-index: 10;
+}
+
+/* Gestione errori foto */
+.hero-image .text-center {
+  background: var(--primary-gradient);
+  color: white;
+  opacity: 0.9;
+}
+
+/* Animazioni per menu items */
+.menu-items > div {
+  animation: fadeInUp 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+.menu-items > div:nth-child(1) { animation-delay: 0.1s; }
+.menu-items > div:nth-child(2) { animation-delay: 0.2s; }
+.menu-items > div:nth-child(3) { animation-delay: 0.3s; }
+.menu-items > div:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Miglioramenti per mobile */
+@media (max-width: 576px) {
+  .restaurant-info .display-6 {
+    font-size: 1.5rem;
+  }
+
+  .restaurant-info .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .menu-items {
+    padding: 0.75rem;
+  }
+
+  .hero-photo-container .btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+}
+/* =================================================================
+   FIX HERO SECTION - Altezza Desktop
+================================================================= */
+
+/* Hero Section - Altezza aumentata per desktop */
+.hero-section {
+  height: 400px; /* Aumentato da 300px */
+  overflow: hidden;
+}
+
+/* Hero Image */
+.hero-image {
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Hero Photo Container */
+.hero-photo-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Hero Photo */
+.hero-photo {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  height: 100%;
+  width: 100%;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 1200px) {
+  .hero-section {
+    height: 500px; /* Ancora più alto per schermi grandi */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero-section {
+    height: 450px; /* Altezza media per tablet landscape */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-section {
+    height: 350px; /* Altezza per tablet */
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    height: 250px; /* Altezza per mobile (come prima) */
+  }
+}
+
+/* Gallery Controls - Adattati alle nuove dimensioni */
+.hero-photo-container .btn {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border: none !important;
+  color: white !important;
+  width: 50px;  /* Aumentato da 40px */
+  height: 50px; /* Aumentato da 40px */
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.hero-photo-container .btn:hover {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  transform: scale(1.1);
+}
+
+/* Photo Counter Badge - Più grande per desktop */
+.hero-photo-container .badge {
+  backdrop-filter: blur(10px);
+  font-size: 1rem; /* Aumentato da 0.8rem */
+  padding: 0.5rem 1rem;
+}
+
+/* Responsive per controlli */
+@media (max-width: 768px) {
+  .hero-photo-container .btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .hero-photo-container .badge {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-photo-container .btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+
+  .hero-photo-container .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Fix per placeholder su desktop */
+.hero-image .text-center {
+  background: var(--primary-gradient);
+  color: white;
+  opacity: 0.9;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image .text-center .fs-1 {
+  font-size: 4rem !important; /* Più grande su desktop */
+}
+
+@media (max-width: 768px) {
+  .hero-image .text-center .fs-1 {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image .text-center .fs-1 {
+    font-size: 2rem !important;
+  }
+}
+/* =================================================================
+   PHOTO MODAL LIGHTBOX - Da aggiungere al tuo CSS
+================================================================= */
+
+/* Modal Overlay */
+.photo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/* Modal Container */
+.photo-modal-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+/* Photo */
+.photo-modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+/* Close Button */
+.photo-modal-close {
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.photo-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Navigation Controls */
+.photo-modal-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.photo-modal-prev,
+.photo-modal-next {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.photo-modal-prev:hover,
+.photo-modal-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.photo-modal-prev {
+  margin-left: -80px;
+}
+
+.photo-modal-next {
+  margin-right: -80px;
+}
+
+/* Photo Counter */
+.photo-modal-counter {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Photo Info */
+.photo-modal-info {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+}
+
+.photo-modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.photo-modal-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .photo-modal-overlay {
+    padding: 10px;
+  }
+
+  .photo-modal-container {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .photo-modal-close {
+    top: -40px;
+    right: -5px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .photo-modal-prev,
+  .photo-modal-next {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .photo-modal-prev {
+    margin-left: -60px;
+  }
+
+  .photo-modal-next {
+    margin-right: -60px;
+  }
+
+  .photo-modal-counter {
+    bottom: -50px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .photo-modal-info {
+    bottom: -100px;
+  }
+
+  .photo-modal-title {
+    font-size: 1.2rem;
+  }
+
+  .photo-modal-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .photo-modal-prev {
+    margin-left: -40px;
+  }
+
+  .photo-modal-next {
+    margin-right: -40px;
+  }
+
+  .photo-modal-prev,
+  .photo-modal-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Animazioni */
+@keyframes photoModalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.photo-modal-overlay {
+  animation: photoModalFadeIn 0.3s ease-out;
+}
+
+.photo-modal-image {
+  animation: photoModalFadeIn 0.3s ease-out;
+}
+
+/* Keyboard navigation hint */
+.photo-modal-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+/* Prevent body scroll when modal is open */
+.modal-open {
+  overflow: hidden;
+}
+/* =================================================================
+   MENU MODAL - Da aggiungere al tuo CSS
+================================================================= */
+
+/* Menu Modal Overlay */
+.menu-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Menu Modal Container */
+.menu-modal-container {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Menu Modal Close Button */
+.menu-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-modal-close:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Menu Modal Header */
+.menu-modal-header {
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.menu-modal-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.menu-modal-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Menu Modal Content */
+.menu-modal-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 2rem 2rem;
+}
+
+/* Menu Category Group */
+.menu-category-group {
+  margin-bottom: 2rem;
+}
+
+.menu-category-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Menu Category Title */
+.menu-category-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Menu Items List */
+.menu-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Menu Item */
+.menu-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:hover {
+  background-color: var(--bg-secondary);
+  margin: 0 -1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Menu Item Header */
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.5rem;
+}
+
+/* Menu Item Name */
+.menu-item-name {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.3;
+  flex: 1;
+  padding-right: 1rem;
+}
+
+/* Menu Item Price */
+.menu-item-price {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+/* Menu Item Description */
+.menu-item-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Scrollbar personalizzata */
+.menu-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-modal-content::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 3px;
+}
+
+.menu-modal-content::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+.menu-modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-modal-overlay {
+    padding: 10px;
+  }
+
+  .menu-modal-container {
+    max-height: 95vh;
+  }
+
+  .menu-modal-header {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+
+  .menu-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .menu-modal-content {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .menu-category-title {
+    font-size: 1.1rem;
+  }
+
+  .menu-item-header {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.25rem;
+  }
+
+  .menu-item-name {
+    padding-right: 0;
+  }
+
+  .menu-item-price {
+    align-self: flex-end;
+  }
+
+  .menu-modal-close {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-modal-header {
+    padding: 1rem;
+  }
+
+  .menu-modal-content {
+    padding: 1rem;
+  }
+
+  .menu-item {
+    padding: 0.75rem 0;
+  }
+
+  .menu-item:hover {
+    margin: 0 -0.5rem;
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menu-modal-container {
+  animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prevent body scroll when modal is open */
+.menu-modal-open {
+  overflow: hidden;
+}
+
+/* =================================================================
+   TOOLTIP E OVERLAY PER DATE BOOKING - NUOVI STILI
+================================================================= */
+
+/* Container per date con tooltip */
+.date-button-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.date-button-container.date-disabled {
+  cursor: not-allowed;
+}
+
+/* Overlay per date disabilitate */
+.date-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.375rem;
+  z-index: 5;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.date-button-container:hover .date-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.date-overlay .fas.fa-ban {
+  color: #dc3545 !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  animation: pulse-ban 2s infinite;
+}
+
+@keyframes pulse-ban {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Bottoni date disabilitati */
+.date-btn.disabled-date {
+  opacity: 0.6;
+  pointer-events: none;
+  filter: grayscale(50%);
+}
+
+.date-button-container.date-disabled .date-btn {
+  cursor: not-allowed;
+}
+
+/* Container per link "Altre date" */
+.link-disabled {
+  cursor: not-allowed;
+  position: relative;
+}
+
+/* Overlay per link disabilitato */
+.link-overlay {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.link-overlay .fas.fa-ban {
+  color: #dc3545 !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Link disabilitato */
+.disabled-link {
+  opacity: 0.6;
+  pointer-events: none;
+  filter: grayscale(50%);
+}
+
+/* =================================================================
+   TOOLTIP BOOTSTRAP PERSONALIZZATI
+================================================================= */
+
+/* Tooltip custom styling */
+.tooltip {
+  --bs-tooltip-bg: var(--bg-color);
+  --bs-tooltip-color: var(--text-color);
+  --bs-tooltip-border-color: var(--primary-color);
+}
+
+.tooltip .tooltip-inner {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border: 2px solid var(--primary-color) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  max-width: 250px !important;
+}
+
+.tooltip .tooltip-arrow::before {
+  border-top-color: var(--primary-color) !important;
+  border-bottom-color: var(--primary-color) !important;
+}
+
+/* Animazione tooltip */
+.tooltip {
+  animation: tooltipFadeIn 0.3s ease-out;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================================================
+   HOVER EFFECTS PER DATE ABILITATE
+================================================================= */
+
+.date-button-container:not(.date-disabled) .date-btn {
+  transition: all 0.3s ease;
+}
+
+.date-button-container:not(.date-disabled) .date-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.date-button-container:not(.date-disabled) .date-btn:active {
+  transform: translateY(0);
+}
+
+/* =================================================================
+   RESPONSIVE PER TOOLTIP E OVERLAY
+================================================================= */
+
+@media (max-width: 768px) {
+  .date-overlay .fas.fa-ban {
+    font-size: 1.5rem !important;
+  }
+
+  .link-overlay {
+    width: 20px;
+    height: 20px;
+    left: -8px;
+  }
+
+  .link-overlay .fas.fa-ban {
+    font-size: 0.8rem !important;
+  }
+
+  .tooltip .tooltip-inner {
+    font-size: 0.8rem !important;
+    padding: 0.5rem 0.75rem !important;
+    max-width: 200px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .date-overlay .fas.fa-ban {
+    font-size: 1.2rem !important;
+  }
+
+  .link-overlay {
+    width: 18px;
+    height: 18px;
+    left: -6px;
+  }
+
+  .tooltip .tooltip-inner {
+    font-size: 0.75rem !important;
+    padding: 0.4rem 0.6rem !important;
+    max-width: 180px !important;
+  }
+}
+
+/* =================================================================
+   MIGLIORAMENTI PER ACCESSIBILITÀ
+================================================================= */
+
+/* Focus states per elementi disabilitati */
+.date-button-container.date-disabled:focus-within {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+.link-disabled:focus-within {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =================================================================
+   STATI DI CARICAMENTO E TRANSIZIONI
+================================================================= */
+
+.date-button-container {
+  transition: all 0.3s ease;
+}
+
+.date-button-container.date-disabled {
+  animation: disabledState 0.5s ease-in-out;
+}
+
+@keyframes disabledState {
+  from {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+  to {
+    opacity: 0.6;
+    filter: grayscale(50%);
+  }
+}
+
+/* Preloader per overlay */
+.date-overlay.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+/* =================================================================
+   STILI CUSTOM PER SWEETALERT2 MODAL - Da aggiungere al CSS globale
+================================================================= */
+
+/* SweetAlert2 Booking Modal Custom Styles */
+.swal-booking-modal {
+  border-radius: 1rem !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.swal-booking-title {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+}
+
+.swal-booking-content {
+  padding: 0 1rem !important;
+}
+
+.swal-booking-content .text-primary {
+  color: var(--primary-color) !important;
+}
+
+.swal-booking-confirm {
+  background-color: var(--primary-color) !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swal-booking-confirm:hover {
+  background-color: var(--primary-dark) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3) !important;
+}
+
+.swal-booking-cancel {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-color) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swal-booking-cancel:hover {
+  background-color: var(--bg-color) !important;
+  border-color: var(--text-color) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Dark theme support */
+.swal2-popup {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.swal2-title {
+  color: var(--text-color) !important;
+}
+
+.swal2-html-container {
+  color: var(--text-color) !important;
+}
+
+/* Responsive per modal */
+@media (max-width: 768px) {
+  .swal-booking-modal {
+    margin: 1rem !important;
+    max-width: calc(100vw - 2rem) !important;
+  }
+
+  .swal-booking-title {
+    font-size: 1.3rem !important;
+  }
+
+  .swal-booking-confirm,
+  .swal-booking-cancel {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Animazioni custom */
+.animate__fadeInUp {
+  animation-duration: 0.4s !important;
+}
+
+.animate__fadeOutDown {
+  animation-duration: 0.3s !important;
+}
+
+.reviews-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9997;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.reviews-modal-container {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.reviews-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.reviews-modal-close:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.reviews-modal-header {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.reviews-modal-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.reviews-modal-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.reviews-modal-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-item {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.review-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.review-avatar {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.review-user-name {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.review-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.review-rating-badge {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.review-text {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.review-no-comment {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 0.5rem 0;
+}
+
+.empty-reviews-icon {
+  font-size: 4rem;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.empty-reviews-title {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.reviews-modal-open {
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reviews-modal-container {
+    max-height: 95vh;
+  }
+
+  .reviews-modal-header {
+    padding: 1.5rem;
+  }
+
+  .reviews-modal-content {
+    padding: 1rem;
+  }
+
+  .review-item {
+    padding: 1rem;
+  }
+}
